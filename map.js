@@ -36,3 +36,8 @@ map.addControl(geolocate, 'top-left')
 geolocate.on('geolocate', function(event) {
 
 })
+
+map.on('click', function(event) {
+
+    let features = map.queryRenderedFeatures({ layers: ['rat-sightings'] })
+    console.log(features)
